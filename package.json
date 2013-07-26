@@ -1,0 +1,26 @@
+{
+  "name": "smallCOR",
+  "version": "0.0.1",
+  "description": "Connect Middleware to provide cross origin resource sharing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nmartin867/smallCOR.git"
+  },
+  "keywords": [
+    "cors",
+    "http",
+    "connect",
+    "express"
+  ],
+  "author": "Nick Martin",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "87672e6b3a9a3c2fbb583434b7f868a2fb2cd6f8",
+  "bugs": {
+    "url": "https://github.com/nmartin867/smallCOR/issues"
+  }
+}
