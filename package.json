@@ -1,7 +1,7 @@
 {
   "name": "small-cor",
   "version": "1.0.0",
-  "description": "Very light weight Connect & Express middleware module to provide cross origin resource sharing.",
+  "description": "Very light weight Express middleware module which makes cross origin resource sharing easy.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,7 +14,8 @@
     "cors",
     "http",
     "connect",
-    "express"
+    "express",
+    "ajax"
   ],
   "author": "Nick Martin",
   "license": "MIT",
