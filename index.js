@@ -4,8 +4,8 @@ var allowedMethods = null;
 var allowedHeaders = null;
 
 // the middleware function
-module.exports = function(options) {
-	for(var o in options){
+module.exports = function smallCOR(options) {
+	for(var o in options){		
 		if(o === 'origins'){
 			allowedOrigins = options[o];
 		}
@@ -19,34 +19,34 @@ module.exports = function(options) {
 
 	return function(req, res, next) {
 		if(allowedOrigins !== null){
-			var responseOrigins = null;
+			var responseOrigins = '';
 			var length = allowedOrigins.length;
 			for(var i = 0; i < length; ++i){
 				responseOrigins += allowedOrigins[i];
 				if(i !== (length - 1))
 					responseOrigins += ',';
-			}
-			res.header('Access-Control-Allow-Origin', responseOrigins);
+			}			
+			res.setHeader('Access-Control-Allow-Origin', responseOrigins);
 		}
 		if(allowedMethods !== null){
-			var responseMethods = null;
+			var responseMethods = '';
 			var length = allowedMethods.length;
 			for(var i = 0; i < length; ++i){
-				responseMethods += responseMethods[i];
+				responseMethods += allowedMethods[i];
 				if(i !== (length - 1))
 					responseMethods += ',';
-			}
-			res.header('Access-Control-Allow-Methods', responseMethods);
+			}		
+			res.setHeader('Access-Control-Allow-Methods', responseMethods);
 		}
 		if(allowedHeaders !== null){
-			var responseHeaders = null;
+			var responseHeaders = '';
 			var length = allowedHeaders.length;
 			for(var i = 0; i < length; ++i){
-				responseHeaders += responseHeaders[i];
+				responseHeaders += allowedHeaders[i];
 				if(i !== (length - 1))
 					responseHeaders += ',';
-			}
-			res.header('Access-Control-Allow-Headers', responseHeaders);
+			}			
+			res.setHeader('Access-Control-Allow-Headers', responseHeaders);
 		}
 
     //ack the pre-flight
@@ -56,4 +56,5 @@ module.exports = function(options) {
     else {
     	next();
     }
+};
 };
