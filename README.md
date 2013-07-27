@@ -1,4 +1,4 @@
-smallCOR
+small-cor
 ========
 
-Connect Middleware to provide cross origin resource sharing
+Very light weight middleware for Express or Connect which makes cross origin resource sharing easy.
