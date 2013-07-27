@@ -27,3 +27,9 @@ app.get('/', function(req, res){
 
 app.listen(3000);
 ```
+An HTTP GET request to localhost:3000 will result in HTTP response which contains the following headers:
+```
+Access-Control-Allow-Headers:X-Custom
+Access-Control-Allow-Methods:GET
+Access-Control-Allow-Origin:*
+```
