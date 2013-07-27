@@ -1,7 +1,7 @@
 {
-  "name": "smallCOR",
+  "name": "small-cor",
   "version": "1.0.0",
-  "description": "Connect Middleware to provide cross origin resource sharing",
+  "description": "Very light weight Connect & Express middleware module to provide cross origin resource sharing.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

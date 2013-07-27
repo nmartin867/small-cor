@@ -4,23 +4,132 @@
 3 info using node@v0.10.8
 4 verbose publish [ '.' ]
 5 verbose read json /Users/Nick/Node/smallCOR/package.json
-6 error Error: invalid version: 1.0
-6 error     at Object.module.exports.fixVersionField (/usr/local/lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/fixer.js:84:13)
-6 error     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/normalize.js:28:38
-6 error     at Array.forEach (native)
-6 error     at normalize (/usr/local/lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/normalize.js:27:15)
-6 error     at final (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:304:33)
-6 error     at then (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:118:48)
-6 error     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:228:40
-6 error     at fs.js:266:14
-6 error     at Object.oncomplete (fs.js:107:15)
-7 error If you need help, you may report this log at:
-7 error     <http://github.com/isaacs/npm/issues>
-7 error or email it to:
-7 error     <npm-@googlegroups.com>
-8 error System Darwin 12.4.0
-9 error command "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
-10 error cwd /Users/Nick/Node/smallCOR
-11 error node -v v0.10.8
-12 error npm -v 1.2.23
-13 verbose exit [ 1, true ]
+6 verbose cache add [ '.', null ]
+7 verbose cache add name=undefined spec="." args=[".",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: '.',
+8 verbose parsed url   path: '.',
+8 verbose parsed url   href: '.' }
+9 silly lockFile 3a52ce78- .
+10 verbose lock . /Users/Nick/.npm/3a52ce78-.lock
+11 verbose read json package.json
+12 verbose tar pack [ '/var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/tmp.tgz',
+12 verbose tar pack   '.' ]
+13 verbose tarball /var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/tmp.tgz
+14 verbose folder .
+15 info prepublish smallCOR@1.0.0
+16 silly lockFile 3a52ce78- .
+17 verbose lock . /Users/Nick/.npm/3a52ce78-.lock
+18 silly lockFile 92e62bdf-64588-0-7790132572408766-tmp-tgz /var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/tmp.tgz
+19 verbose lock /var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/tmp.tgz /Users/Nick/.npm/92e62bdf-64588-0-7790132572408766-tmp-tgz.lock
+20 silly lockFile 3a52ce78- .
+21 silly lockFile 3a52ce78- .
+22 silly lockFile 92e62bdf-64588-0-7790132572408766-tmp-tgz /var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/tmp.tgz
+23 silly lockFile 92e62bdf-64588-0-7790132572408766-tmp-tgz /var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/tmp.tgz
+24 verbose tar unpack /var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/tmp.tgz
+25 silly lockFile 1cc7b3fc-64588-0-7790132572408766-package /var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/package
+26 verbose lock /var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/package /Users/Nick/.npm/1cc7b3fc-64588-0-7790132572408766-package.lock
+27 silly lockFile 92e62bdf-64588-0-7790132572408766-tmp-tgz /var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/tmp.tgz
+28 verbose lock /var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/tmp.tgz /Users/Nick/.npm/92e62bdf-64588-0-7790132572408766-tmp-tgz.lock
+29 silly gunzTarPerm modes [ '755', '644' ]
+30 silly gunzTarPerm extractEntry package.json
+31 silly gunzTarPerm extractEntry README.md
+32 silly gunzTarPerm extractEntry LICENSE
+33 silly gunzTarPerm extractEntry index.js
+34 verbose read json /var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/package/package.json
+35 silly lockFile 1cc7b3fc-64588-0-7790132572408766-package /var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/package
+36 silly lockFile 1cc7b3fc-64588-0-7790132572408766-package /var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/package
+37 silly lockFile 92e62bdf-64588-0-7790132572408766-tmp-tgz /var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/tmp.tgz
+38 silly lockFile 92e62bdf-64588-0-7790132572408766-tmp-tgz /var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/tmp.tgz
+39 verbose from cache /var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/package/package.json
+40 verbose tar pack [ '/Users/Nick/.npm/smallCOR/1.0.0/package.tgz',
+40 verbose tar pack   '/var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/package' ]
+41 verbose tarball /Users/Nick/.npm/smallCOR/1.0.0/package.tgz
+42 verbose folder /var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/package
+43 silly lockFile 1cc7b3fc-64588-0-7790132572408766-package /var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/package
+44 verbose lock /var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/package /Users/Nick/.npm/1cc7b3fc-64588-0-7790132572408766-package.lock
+45 silly lockFile 5e2680fc-k-npm-smallCOR-1-0-0-package-tgz /Users/Nick/.npm/smallCOR/1.0.0/package.tgz
+46 verbose lock /Users/Nick/.npm/smallCOR/1.0.0/package.tgz /Users/Nick/.npm/5e2680fc-k-npm-smallCOR-1-0-0-package-tgz.lock
+47 silly lockFile 1cc7b3fc-64588-0-7790132572408766-package /var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/package
+48 silly lockFile 1cc7b3fc-64588-0-7790132572408766-package /var/folders/h8/1v3lmvc13vl4nqt_jws0b0fm0000gn/T/npm-1014/1374957764588-0.7790132572408766/package
+49 silly lockFile 5e2680fc-k-npm-smallCOR-1-0-0-package-tgz /Users/Nick/.npm/smallCOR/1.0.0/package.tgz
+50 silly lockFile 5e2680fc-k-npm-smallCOR-1-0-0-package-tgz /Users/Nick/.npm/smallCOR/1.0.0/package.tgz
+51 silly lockFile 9547249f--Nick-npm-smallCOR-1-0-0-package /Users/Nick/.npm/smallCOR/1.0.0/package
+52 verbose lock /Users/Nick/.npm/smallCOR/1.0.0/package /Users/Nick/.npm/9547249f--Nick-npm-smallCOR-1-0-0-package.lock
+53 silly lockFile 9547249f--Nick-npm-smallCOR-1-0-0-package /Users/Nick/.npm/smallCOR/1.0.0/package
+54 silly lockFile 9547249f--Nick-npm-smallCOR-1-0-0-package /Users/Nick/.npm/smallCOR/1.0.0/package
+55 verbose tar unpack /Users/Nick/.npm/smallCOR/1.0.0/package.tgz
+56 silly lockFile 9547249f--Nick-npm-smallCOR-1-0-0-package /Users/Nick/.npm/smallCOR/1.0.0/package
+57 verbose lock /Users/Nick/.npm/smallCOR/1.0.0/package /Users/Nick/.npm/9547249f--Nick-npm-smallCOR-1-0-0-package.lock
+58 silly lockFile 5e2680fc-k-npm-smallCOR-1-0-0-package-tgz /Users/Nick/.npm/smallCOR/1.0.0/package.tgz
+59 verbose lock /Users/Nick/.npm/smallCOR/1.0.0/package.tgz /Users/Nick/.npm/5e2680fc-k-npm-smallCOR-1-0-0-package-tgz.lock
+60 silly gunzTarPerm modes [ '755', '644' ]
+61 silly gunzTarPerm extractEntry package.json
+62 silly gunzTarPerm extractEntry README.md
+63 silly gunzTarPerm extractEntry LICENSE
+64 silly gunzTarPerm extractEntry index.js
+65 verbose read json /Users/Nick/.npm/smallCOR/1.0.0/package/package.json
+66 silly lockFile 9547249f--Nick-npm-smallCOR-1-0-0-package /Users/Nick/.npm/smallCOR/1.0.0/package
+67 silly lockFile 9547249f--Nick-npm-smallCOR-1-0-0-package /Users/Nick/.npm/smallCOR/1.0.0/package
+68 silly lockFile 5e2680fc-k-npm-smallCOR-1-0-0-package-tgz /Users/Nick/.npm/smallCOR/1.0.0/package.tgz
+69 silly lockFile 5e2680fc-k-npm-smallCOR-1-0-0-package-tgz /Users/Nick/.npm/smallCOR/1.0.0/package.tgz
+70 verbose from cache /Users/Nick/.npm/smallCOR/1.0.0/package/package.json
+71 verbose chmod /Users/Nick/.npm/smallCOR/1.0.0/package.tgz 644
+72 verbose chown /Users/Nick/.npm/smallCOR/1.0.0/package.tgz [ 501, 20 ]
+73 silly lockFile 3a52ce78- .
+74 silly publish { name: 'smallCOR',
+74 silly publish   version: '1.0.0',
+74 silly publish   description: 'Connect Middleware to provide cross origin resource sharing',
+74 silly publish   main: 'index.js',
+74 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+74 silly publish   repository:
+74 silly publish    { type: 'git',
+74 silly publish      url: 'https://github.com/nmartin867/smallCOR.git' },
+74 silly publish   keywords: [ 'cors', 'http', 'connect', 'express' ],
+74 silly publish   author: { name: 'Nick Martin' },
+74 silly publish   license: 'MIT',
+74 silly publish   readmeFilename: 'README.md',
+74 silly publish   gitHead: '87672e6b3a9a3c2fbb583434b7f868a2fb2cd6f8',
+74 silly publish   bugs: { url: 'https://github.com/nmartin867/smallCOR/issues' },
+74 silly publish   readme: 'smallCOR\n========\n\nConnect Middleware to provide cross origin resource sharing\n',
+74 silly publish   _id: 'smallCOR@1.0.0',
+74 silly publish   dist: { shasum: '5b4c87fc00b47f22f9df3385de5fdd9232de5cd1' },
+74 silly publish   _from: '.' }
+75 verbose url raw smallCOR
+76 verbose url resolving [ 'https://registry.npmjs.org/', './smallCOR' ]
+77 verbose url resolved https://registry.npmjs.org/smallCOR
+78 info trying registry request attempt 1 at 14:43:44
+79 http PUT https://registry.npmjs.org/smallCOR
+80 http 403 https://registry.npmjs.org/smallCOR
+81 info trying registry request attempt 1 at 14:43:45
+82 http PUT https://registry.npmjs.org/smallCOR
+83 http 403 https://registry.npmjs.org/smallCOR
+84 error publish Failed PUT response 403
+85 error Error: forbidden New packages must have all-lowercase names: smallCOR
+85 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:272:14)
+85 error     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/index.js:148:22)
+85 error     at Request.EventEmitter.emit (events.js:98:17)
+85 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/index.js:876:14)
+85 error     at Request.EventEmitter.emit (events.js:117:20)
+85 error     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/index.js:827:12)
+85 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+85 error     at _stream_readable.js:910:16
+85 error     at process._tickCallback (node.js:415:13)
+86 error If you need help, you may report this log at:
+86 error     <http://github.com/isaacs/npm/issues>
+86 error or email it to:
+86 error     <npm-@googlegroups.com>
+87 error System Darwin 12.4.0
+88 error command "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+89 error cwd /Users/Nick/Node/smallCOR
+90 error node -v v0.10.8
+91 error npm -v 1.2.23
+92 verbose exit [ 1, true ]
