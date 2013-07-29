@@ -17,6 +17,10 @@
     "express",
     "ajax"
   ],
+   "devDependencies": {
+    "mocha": "*",
+    "supertest": "*"
+  },
   "author": "Nick Martin",
   "license": "MIT",
   "readmeFilename": "README.md",
