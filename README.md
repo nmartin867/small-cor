@@ -16,7 +16,7 @@ var app = express();
 var smallCOR = require('small-cor');
 
 app.use(smallCOR({
-    origins : ['*'],
+    origin : '*',
 	methods : ['GET'],
 	headers : ['X-Custom']
 }));
