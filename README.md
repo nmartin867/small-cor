@@ -35,7 +35,7 @@ Access-Control-Allow-Origin:*
 ```
 Options
 =======
-* `origin`  (string): URI of allowed origin. i.e. `*` or `http://mysite.com`
+* `origin`  (string): URI of allowed origin. i.e. `'*'` or `'http://mysite.com'`
 * `methods` (array): Array of strings containing permitted HTTP verbs i.e. `['GET']` or `['GET','POST']`
 * `headers`  (array): Array of strings containing permitted HTTP headers i.e. `['X-Custom']` or `['X-Custom', 'X-PingPong']`
 * `credentials`  (bool): Boolean indicating if browser will allow creditials to be sent. 
