@@ -1,13 +1,14 @@
 
-var allowedOrigins = null;
+var allowedOrigin = null;
 var allowedMethods = null;
 var allowedHeaders = null;
+var allowedCredentials = false; 
 
 // the middleware function
 module.exports = function(options) {
 	for(var o in options){		
-		if(o === 'origins'){
-			allowedOrigins = options[o];
+		if(o === 'origin'){
+			allowedOrigin = options[o];
 		}
 		if(o === 'methods'){
 			allowedMethods = options[o];
@@ -15,18 +16,16 @@ module.exports = function(options) {
 		if(o === 'headers'){
 			allowedHeaders = options[o];
 		}
+		if(o === 'credentials'){
+			if(options[o]){
+				allowedCredentials = true;
+			}
+		}
 	}
 
 	return function smallcor(req, res, next) {
-		if(allowedOrigins !== null){
-			var responseOrigins = '';
-			var length = allowedOrigins.length;
-			for(var i = 0; i < length; ++i){
-				responseOrigins += allowedOrigins[i];
-				if(i !== (length - 1))
-					responseOrigins += ',';
-			}			
-			res.setHeader('Access-Control-Allow-Origin', responseOrigins);
+		if(allowedOrigin !== null){			
+			res.setHeader('Access-Control-Allow-Origin', allowedOrigin);
 		}
 		if(allowedMethods !== null){
 			var responseMethods = '';
@@ -47,6 +46,9 @@ module.exports = function(options) {
 					responseHeaders += ',';
 			}			
 			res.setHeader('Access-Control-Allow-Headers', responseHeaders);
+		}
+		if(allowedCredentials){
+			res.setHeader('Control-Allow-Credentials', true);			
 		}
 
     //ack the pre-flight
