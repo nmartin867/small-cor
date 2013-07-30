@@ -4,7 +4,7 @@ var allowedMethods = null;
 var allowedHeaders = null;
 
 // the middleware function
-module.exports = function smallCOR(options) {
+module.exports = function(options) {
 	for(var o in options){		
 		if(o === 'origins'){
 			allowedOrigins = options[o];
@@ -17,7 +17,7 @@ module.exports = function smallCOR(options) {
 		}
 	}
 
-	return function(req, res, next) {
+	return function smallcor(req, res, next) {
 		if(allowedOrigins !== null){
 			var responseOrigins = '';
 			var length = allowedOrigins.length;
