@@ -1,6 +1,6 @@
 {
   "name": "small-cor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Very light weight Express middleware module which makes cross origin resource sharing easy.",
   "main": "index.js",
   "scripts": {
