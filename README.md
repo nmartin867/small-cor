@@ -1,9 +1,11 @@
 small-cor
 ========
 
+[![Build Status](https://travis-ci.org/nmartin867/small-cor.png)](https://travis-ci.org/nmartin867/small-cor)
+
 Very light weight middleware for [Express](https://github.com/visionmedia/express) which makes cross origin resource sharing easy.
 
----
+
 
 ## Installation
 ```
