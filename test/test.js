@@ -11,19 +11,19 @@ app.use(smallCOR({
 }));
 
 app.get('/', function(req, res){  
-	res.send('hello world');
+	res.send(201,{message: 'meow'});
 });
 
+
 describe('Headers', function(){
-	it('contains a single custom header', function(done){
-		for(var i = 0; i < app.stack.length; i++) {
-			console.log(app.stack[i].handle)
-		}
+	it('contains a single custom header', function(done){		
 		request(app)
 		.get('/')      
-		.expect('Access-Control-Allow-Headers', 'X-Custom')  
-		.expect('Access-Control-Allow-Methods', 'GET')   
-		.expect('Access-Control-Allow-Origin', '*') 
-		.expect(200, done);
-	})
-})
+		.expect('Access-Control-Allow-Headers', 'X-Custom')
+		.expect(201)
+		.end(function(err, res){
+			if(err) throw err;
+			done();
+		});
+	});
+});
