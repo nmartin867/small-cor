@@ -5,17 +5,17 @@ var request = require('supertest')
 var app = express();
 
 app.use(smallCOR({
-	origins : ['*'],
+	origin : ['*'],
 	methods : ['GET'],
 	headers : ['X-Custom']
-}));
+}))
 
-app.get('/', function(req, res){  
+app.get('/', function(req, res){
 	res.send(201,{message: 'meow'});
 });
 
 
-describe('Headers', function(){
+describe('HTTP Headers', function(){
 	it('contains a single custom header', function(done){		
 		request(app)
 		.get('/')      
@@ -26,4 +26,28 @@ describe('Headers', function(){
 			done();
 		});
 	});
+
+	it('contains a single GET HTTP Method', function(done){		
+		request(app)
+		.get('/')      
+		.expect('Access-Control-Allow-Methods', 'GET')
+		.expect(201)
+		.end(function(err, res){
+			if(err) throw err;
+			done();
+		});
+	});
+
+    it('contains a single origin header', function(done){		
+		request(app)
+		.get('/')      
+		.expect('Access-Control-Allow-Origin', '*')
+		.expect(201)
+		.end(function(err, res){
+			if(err) throw err;
+			done();
+		});
+	});
+
 });
+
