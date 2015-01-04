@@ -1,62 +1,26 @@
+var _ = require('lodash');
 
-var allowedOrigin = null;
-var allowedMethods = null;
-var allowedHeaders = null;
-var allowedCredentials = false; 
+module.exports = function (options) {
+    _.merge({credentials: false}, options);
+    return function (req, res, next) {
+        if (!_.isUndefined(options.origin))
+            res.setHeader('Access-Control-Allow-Origin', this.origin);
+        if (!_.isUndefined(options.methods)) {
+            options.methods = _.isArray(options.methods) ? _.uniq(options.methods).join(',').toUpperCase() : options.methods;
+            res.setHeader('Access-Control-Allow-Methods', options.methods);
+        }
+        if (!_.isUndefined(options.headers)) {
+            options.headers = _.isArray(options.headers) ? _.uniq(options.headers).join(',').toUpperCase() : options.headers;
+            res.setHeader('Access-Control-Allow-Headers', options.headers);
+        }
+        if (options.credentials === true || options.credentials === 'true')
+            res.setHeader('Control-Allow-Credentials', true);
 
-// the middleware function
-module.exports = function(options) {
-	for(var o in options){		
-		if(o === 'origin'){
-			allowedOrigin = options[o];
-		}
-		if(o === 'methods'){
-			allowedMethods = options[o];
-		}
-		if(o === 'headers'){
-			allowedHeaders = options[o];
-		}
-		if(o === 'credentials'){
-			if(options[o]){
-				allowedCredentials = true;
-			}
-		}
-	}
-
-	return function smallcor(req, res, next) {
-		if(allowedOrigin !== null){			
-			res.setHeader('Access-Control-Allow-Origin', allowedOrigin);
-		}
-		if(allowedMethods !== null){
-			var responseMethods = '';
-			var length = allowedMethods.length;
-			for(var i = 0; i < length; ++i){
-				responseMethods += allowedMethods[i];
-				if(i !== (length - 1))
-					responseMethods += ',';
-			}		
-			res.setHeader('Access-Control-Allow-Methods', responseMethods);
-		}
-		if(allowedHeaders !== null){
-			var responseHeaders = '';
-			var length = allowedHeaders.length;
-			for(var i = 0; i < length; ++i){
-				responseHeaders += allowedHeaders[i];
-				if(i !== (length - 1))
-					responseHeaders += ',';
-			}			
-			res.setHeader('Access-Control-Allow-Headers', responseHeaders);
-		}
-		if(allowedCredentials){
-			res.setHeader('Control-Allow-Credentials', true);			
-		}
-
-    //ack the pre-flight
-    if ('OPTIONS' == req.method) {
-    	res.send(200);
-    }
-    else {
-    	next();
-    }
-};
+        if ('OPTIONS' == req.method) {
+            res.send(200);
+        }
+        else {
+            next();
+        }
+    };
 };
