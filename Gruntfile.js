@@ -1,16 +1,25 @@
 module.exports = function (grunt) {
     grunt.initConfig({
         express: {
-            server: 'test/server/server.js',
-            default_option: {}
+            options: {
+                port: 9000,
+                server: 'test/server/server.js'
+            }
         },
         karma: {
-            unit: {
+            headless: {
+                singleRun: true,
+                browsers: ['PhantomJS'],
+                configFile: 'karma.conf.js'
+            },
+            head: {
+                singleRun: true,
+                browsers: ['Chrome'],
                 configFile: 'karma.conf.js'
             }
         }
     });
     grunt.loadNpmTasks('grunt-express');
     grunt.loadNpmTasks('grunt-karma');
-    grunt.registerTask('default', ['express', 'karma']);
+    grunt.registerTask('default', ['express', 'karma:headless']);
 };
