@@ -5,26 +5,17 @@ var request = require('supertest')
     , app = express();
 
 
-app.use('/single', new SmallCOR());
-
-app.use('/multi', SmallCOR({
+app.use('/', SmallCOR({
     origin: '*',
     methods: ['GET'],
     headers: ['X-Custom', 'X-Small']
 }));
 
-app.get('/single', function (req, res) {
-    res.send(200);
-});
-
-app.get('/multi', function (req, res) {
-    res.send(200);
-});
-
 describe('HTTP Headers [array]', function () {
     it('contains a single header', function (done) {
         request(app)
-            .get('/single')
+            .get('/')
+            .set('X-Requested-With', 'XMLHttpRequest')
             .expect(200, done)
             .end(function (err, res) {
                 console.log(res.headers['Access-Control-Allow-Headers']);
