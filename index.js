@@ -20,7 +20,7 @@ function smallcor(options) {
 
     return function (req, res, next) {
         //bail if `origins` is not given
-        if (!origins) next(new Error('`origins` is required for small-cor'));
+        if (!origins) return next(new Error('`origins` is required for small-cor'));
         setAllowedOrigin(req, res, next);
         setCredentials(res);
         if (req.method === 'OPTIONS') {
