@@ -16,7 +16,7 @@ function smallcor(options) {
         , headers = options.headers
         , methods = options.methods
         , max_age = options.max_age
-        , credentials = options.credentials || false;
+        , credentials = options.credentials;
 
     return function (req, res, next) {
         //bail if `origins` is not given
