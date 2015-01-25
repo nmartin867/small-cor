@@ -6,3 +6,6 @@ npm-debug.log
 
 ##IDE Settings
 .idea
+
+##MAC Crap
+.DS_Store
